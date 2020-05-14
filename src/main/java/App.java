@@ -20,48 +20,9 @@ public class App {
 
         Map<String,Object> model = new HashMap<String,Object>();
 
-//        get("/sightings/form",(req,res)->{
-//            return new ModelAndView(model, "sightingform.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//        post("/sightings/new",(req,res)->{
-//            int animalId = Integer.parseInt(req.queryParams("animal"));
-//            String rangerName = req.queryParams("rangerName");
-//            String sightLocation = req.queryParams("sightLocation");
-//            Sightings sighting = new Sightings(animalId,sightLocation,rangerName);
-//            sighting.save();
-//            return new ModelAndView(model, "sightingSuccess.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//        get("/sightings",(req,res)->{
-//            model.put("sightings",Sightings.all());
-//            return new ModelAndView(model, "sightings.hbs");
-//        }, new HandlebarsTemplateEngine());
-
         get("/", (req,res) -> {
             return new ModelAndView(model, "index.hbs");
         }, new HandlebarsTemplateEngine());
-
-//
-//
-//        get("/endangered",(req,res) ->{
-//            model.put("endangeredAnimals",EndangeredAnimal.all());
-//            return new ModelAndView(model, "endangeredanimal.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//
-//        get("/endangered/form",(req,res)->{
-//            return new ModelAndView(model, "endangeredform.hbs");
-//        }, new HandlebarsTemplateEngine());
-//
-//        post("/endangered/new",(req,res) ->{
-//            String name = req.queryParams("animalName");
-//            String health = req.queryParams("health");
-//            String age = req.queryParams("age");
-//            EndangeredAnimal animal= new EndangeredAnimal(name,health,age);
-//            animal.save();
-//            return new ModelAndView(model, "endangeredSuccess.hbs");
-//        }, new HandlebarsTemplateEngine());
 
         get("/animal/form",(req,res) -> {
             return new ModelAndView(model, "animalform.hbs");
