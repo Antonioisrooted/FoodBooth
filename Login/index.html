@@ -9,30 +9,42 @@
   <title>FoodBooth Login</title>
 </head>
 <body>
-  <div class="jumbotron">
-  <div id="main_div" class="main-div">
-    <h3 style="color: yellow;">Login to FoodBooth </h3> <br>
-    <p>Welcome to our site. We're glad to have you here. Please login with the credentials assigned to you to continue</p>
+  <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom,
+   rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('five-white-plates-with-different-kinds-of-dishes-54455.jpg')">
 
-    <input type="email" placeholder="Email..." id="email_field" />
+<div id="login">
+<h2>FoodBooth</h2>
+<h4> Click here to Login and get started</h4>
+<input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
 
 
     <button id="login">Login</button>
-  </div>
-  <br>
-  <br>  
-  <div id="mydiv"> 
-    <h1>Welcome</h1>
-      <p id="user_para" style="color: aqua;">Welcome to the FoodBooth web app. You're currently logged in.</p> <br>
-      <h3 style="color: aqua;">Select Section to navigate</h3>
-      <ol>
-        <li> Restaurants</li>
-        <li>Recipes</li>
-      </ol>
-      <button onclick="logout()">Logout</button></div> 
-  </div>
-  <script src="index.js"></script>
+</div>
+
+    <div  id="text1">
+      <h1>Welcome</h1>
+      <p>Welcome to our site. We're glad to have you here. Please Select the area you want to visit</p>
+      <a href="/">Restaurants</a> <br>
+      <a href="/">Individual</a>
+    </div>
+ </div>
+  <script>
+    $(document).ready(function(){
+  $('#text1').hide()
+  $("#login").click(function() {
+$("#text1").show();
+  $("#login").hide();    
+  });
+}
+);
+$(document).ready(function(){
+  $("#text1").click(function(){
+      $("#text1").hide();
+      $("#login").show()
+  });
+});
+  </script>
   
 </body>
 </html>
