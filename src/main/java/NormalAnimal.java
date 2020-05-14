@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class NormalAnimal extends Animal {
-    public static final String DATABASE_TYPE = "Not Endangered";
+    public static final String DATABASE_TYPE = "Current Order";
 
     public NormalAnimal(String name) {
         this.name = name;
@@ -35,7 +35,7 @@ public class NormalAnimal extends Animal {
     }
 
     public static List<NormalAnimal> all() {
-        String sql = "SELECT * FROM animals WHERE type='Not Endangered'";
+        String sql = "SELECT * FROM animals WHERE type='Current Order'";
         try (Connection con = DB.sql2o.open()) {
             return con.createQuery(sql)
                     .throwOnMappingFailure(false)
