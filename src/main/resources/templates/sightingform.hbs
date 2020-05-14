@@ -1,0 +1,42 @@
+{{#partial "content"}}
+    <div class="section">
+        <div class="form-left">
+        </div>
+        <h2>Sighting</h2>
+        <div class="form-right">
+            <h3>Add a sighting</h3>
+            <form action="/sightings/new" method="post">
+                <div class="form-group">
+                    <input class="form-control input" type="text" placeholder="Enter the ranger name..." name="rangerName" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <select class="form-control input" name="animalId" >
+                        <option label="" hidden disabled selected value>Select animal...</option>
+                        {{#each normalAnimals}}
+                            <option>{{id}}</option><br><br>
+                        {{/each}}
+                        {{#each endangeredAnimals}}
+                            <option>{{id}}</option><br><br>
+                        {{/each}}
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <select class="form-control input" name="sightLocation">
+                        <option label="" hidden disabled selected value>Enter location </option>
+                        <option value="Zone A">Zone A</option>
+                        <option value="Near the River">Near the River</option>
+                        <option value="Zone C">Zone C</option>
+                        <option value="NE Quadrant">NE Quadrant</option>
+                        <option value="Zone B">Zone B</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+    </div>
+{{/partial}}
+
+{{> layout.hbs}}

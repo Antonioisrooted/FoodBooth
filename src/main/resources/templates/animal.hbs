@@ -1,0 +1,31 @@
+{{#partial "content"}}
+    <div class="pages">
+        <h2 class="text-center">Non Endangered Animals</h2>
+    {{#if normalAnimals}}
+            <div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Type</th>
+                    </tr>
+                    </thead>
+                    {{#each normalAnimals}}
+                        <tbody>
+                        <tr>
+                            <td>{{ id }}</td>
+                            <td>{{ name }}</td>
+                            <td>{{ type }}</td>
+                        </tr>
+                        </tbody>
+                    {{/each}}
+                </table>
+            </div>
+    {{else}}
+            <p>No animal has been recorded. Please add an animal.</p>
+            <a href="/animal/form" class="otherbuttons">Add animal</a>
+        </div>
+    {{/if}}
+{{/partial}}
+{{> layout.hbs}}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wildlife Tracker</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"  href="Public/css/homepage.css">
+    <link rel="stylesheet" type="text/css"  href="Public/css/form.css">
+    <link rel="stylesheet" type="text/css"  href="Public/css/table.css">
+</head>
+<body style="background-color: #99ffcc">
+<div class="container-fluid">
+    <div class="welcome">
+        <div class="navbar"  style=" background-color: #e6ffe6; text-align: center; padding-top: 8px; padding-bottom: 8px; padding right: 70px; padding-left: 218px;">
+            <div class="navbody">
+                <ul style=" list-style: none;">
+                    <li style="float: left; padding-left: 8px; padding-right: 8px;"><a class="a" href="/">Home</a></li>
+                    <li style="float: left; padding-left: 8px; padding-right: 8px;" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Non Endangered Animals <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dplinks" href="/animals">View Animals</a></li>
+                            <li><a class="dplinks" href="/animal/form">Add Animal</a></li>
+                        </ul>
+                    </li>
+                    <li style="float: left; padding-left: 8px; padding-right: 8px;" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Endangered Animals <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dplinks" href="/endangered">View Animals</a></li>
+                            <li><a class="dplinks" href="/endangered/form">Add Animal</a></li>
+                        </ul>
+                    </li>
+                    <li style="float: left; padding-left: 8px; padding-right: 8px;" class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sighting<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li ><a class="dplinks" href="/sightings">View Sighting</a></li>
+                            <li ><a class="dplinks" href="/sightings/form">Add Sighting</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-12">
+            {{#block "content"}}
+            {{/block}}
+        </div>
+    </div>
+</div>
+{{#block "footer"}}
+    <footer class="footer">
+    </footer>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </html>
+{{/block}}

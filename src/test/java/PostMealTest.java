@@ -1,4 +1,4 @@
-import Restaurantservices.PostMeal;
+import Restaurants.PostMeal;
 import org.junit.Rule;
 import org.junit.Test;
 

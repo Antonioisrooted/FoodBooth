@@ -1,4 +1,4 @@
-package Restaurantservices;
+package Restaurants;
 
 import org.sql2o.Connection;
 

@@ -1,5 +1,5 @@
-import Restaurantservices.PostMeal;
-import Restaurantservices.PostRecipe;
+import Restaurants.PostMeal;
+import Restaurants.PostRecipe;
 import spark.ModelAndView;
 import spark.Spark;
 import spark.template.handlebars.HandlebarsTemplateEngine;

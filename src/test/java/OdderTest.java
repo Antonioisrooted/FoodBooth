@@ -1,9 +1,6 @@
-import Restaurantservices.PostRecipe;
+import Restaurants.PostRecipe;
 import org.junit.Rule;
 import org.junit.Test;
-
-import java.sql.Timestamp;
-import java.util.Date;
 
 import static org.junit.Assert.*;
 
