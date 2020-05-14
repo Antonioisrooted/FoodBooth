@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Wildlife Tracker</title>
+    <title>Food Booth</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css"  href="/css/home.css">
     <link rel="stylesheet" type="text/css"  href="/css/form.css">
@@ -13,25 +13,26 @@
         <div class="navbar">
             <div class="navbody">
                 <ul>
-                    <li><a class="a" href="/">Home</a></li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Non Endangered Animals <b class="caret"></b></a>
+                    <li><a class="a" href="/">Restaurant</a></li>
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Make An Order<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dplinks" href="/animals"  style="color:white; background-color:transparent ;">View Animals</a></li>
-                            <li><a class="dplinks" href="/animal/form"  style="color:white; background-color:transparent ;">Add Animal</a></li>
+                            <li ><a class="dplinks" href="/animal"  style="color:white; background-color:transparent ;">View Your Order</a></li>
+                            <li ><a class="dplinks" href="/animal/form"  style="color:white; background-color:transparent ;">Make an Order</a></li>
                         </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Endangered Animals <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dplinks" href="/endangered"  style="color:white; background-color:transparent ;">View Animals</a></li>
-                            <li><a class="dplinks" href="/endangered/form"  style="color:white; background-color:transparent ;">Add Animal</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sighting<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li ><a class="dplinks" href="/sightings"  style="color:white; background-color:transparent ;">View Sighting</a></li>
-                            <li ><a class="dplinks" href="/sightings/form"  style="color:white; background-color:transparent ;">Add Sighting</a></li>
-                        </ul>
-                    </li>
+<!--                    </li>-->
+<!--                    <li><a href="#">About Us</a>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li><a class="dplinks" href="/animals"  style="color:white; background-color:transparent ;">View Your Order</a></li>-->
+<!--                            <li><a class="dplinks" href="/animal/form"  style="color:white; background-color:transparent ;">Make An Order</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+<!--                    <li><a href="#">Services</a>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li><a class="dplinks" href="/endangered"  style="color:white; background-color:transparent ;">View Your Order</a></li>-->
+<!--                            <li><a class="dplinks" href="/endangered/form"  style="color:white; background-color:transparent ;">Make An Order</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+                    <li><a href="#footer">Our Location</a></li>
                 </ul>
             </div>
         </div>
@@ -41,10 +42,17 @@
         </div>
     </div>
 </div>
+</body>
 {{#block "footer"}}
-    <footer class="footer">
+    <footer id="footer">
+        <h1>Our Location</h1>
+        <div class="container">
+            <div class="meals" id="restaurant">
+                <iframe id="image" src="https://www.google.com/maps/d/embed?mid=1VSjqECu5OTTNJPeVHV_mLXz0678tmIVP"
+                        width="100%" height="ml-auto" frameborder="20" style="border: 0;"></iframe>
+            </div>
+        </div>
     </footer>
-    </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>

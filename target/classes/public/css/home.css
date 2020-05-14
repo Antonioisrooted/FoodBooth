@@ -8,16 +8,16 @@
     max-width: 100wh;
     padding: 0px;
     margin: 0px;
-    height:100vh;
-    background: url(/images/frida-bredesen-LNSIGPuZXIg-unsplash.jpg);
+    height:120vh;
+    background: url(/images/woman-pouring-juice-on-glass-3184192.jpg);
     background-size: cover;
 }
 .navbar{
     height:80px;
-    background-color:grey;
+    background-color:black;
 }
 .navbody{
-    float: right;
+    float: left;
     list-style: none;
     margin-top: 20px;
     margin-right:60px;
@@ -42,8 +42,7 @@
     transition: all 0.5s ease 0s;
 }
 .content{
-    margin: 220px 100px;
-    color:white;
+    margin: 200px 100px;
     text-align:center;
 }
 .content h1{
@@ -51,7 +50,10 @@
     font-weight: 100;
     font-family: san-serif;
     line-height: 100px;
-    color:yellow;
+    color:white;
+}
+.content p{
+    color:black;
 }
 .pages h2{
     font-size: 40px;
@@ -65,7 +67,7 @@
 }
 .content p{
    font-size: 30px;
-  font-family: sans-serif;
+   font-family: sans-serif;
 }
 .content a{
     color:white;
@@ -142,7 +144,7 @@ color:black;
     margin-left:10px;
 }
 .teams-col a:hover{
-     transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
     background-color: white;
     color:black
 }
@@ -166,4 +168,9 @@ color:black;
     font-size:20px;
     color:black;
 }
-
+#footer{
+    padding-top:25px;
+    padding-bottom:25px;
+    background: black;
+    text-align:center;
+}

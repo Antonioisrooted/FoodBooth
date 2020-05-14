@@ -1,14 +1,14 @@
 {{#partial "content"}}
     <div class="pages">
-        <h2 class="text-center">Non Endangered Animals</h2>
+        <h2 class="text-center">Your Current Orders</h2>
         {{#if animals}}
             <div>
                 <table class="table">
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
-                        <th>Type</th>
+                        <th>Food</th>
+                        <th>Your Order</th>
                     </tr>
                     </thead>
                     {{#each animals }}
@@ -23,8 +23,8 @@
                 </table>
             </div>
         {{else}}
-                <p>No animal has been recorded. Please add an animal inside the forest.</p>
-                <a href="/animal/form" class="otherbuttons">Add animal</a>
+                <p>No food has been ordered. Please make an order</p>
+                <a href="/animal/form" class="otherbuttons">Make An Order</a>
     </div>
         {{/if}}
 {{/partial}}
