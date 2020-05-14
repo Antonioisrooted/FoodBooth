@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.navbar{
+    height:80px;
+    background-color:black;
+   font-family: 'Poppins', sans-serif;
+}
+.navbody{
+    float: left;
+    list-style: none;
+    margin-top: 20px;
+    margin-right:60px;
+}
+.navbody li{
+    display: inline-block;
+}
+.navbody a{
+    text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+    color: #edf0f1;
+    font-size: 18px;
+    cursor: pointer;
+}
+.navbody li a{
+    padding: 10px 40px;
+    transition: all 0.5s ease 0s;
+    position: relative;
+    text-decoration: none;
+}
+.navbody li a:hover{
+    transition: all 0.5s ease 0s;
+}
+#header{
+    min-height: calc(100vh - 94px);
+    background: url(../images/inner-restaurant.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.height-90{
+    min-height: calc(100vh - 94px);
+}
+.banner h4{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    animation: fromleft;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.owner-btn{
+    animation: fromleft;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards
+}
+
+
+@keyframes fromleft{
+    0%{
+        transform: translatex(-100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(30px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+.customer-btn{
+    color: #c9c1ac;
+    animation: fromright;
+    animation: fromright;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards
+}
+
+
+@keyframes fromright{
+    0%{
+        transform: translatex(100%);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(30px);
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.main-btn{
+    color: white;
+    font-size: 2rem;
+    border: 2px solid blue;
+    transition: all is ease-in-out ;
+}
+.mamin-btn:hover{
+    color: #242424;
+    border: 2px solid #c9c1ac;
+    background: #c9c1ac;
+}
+.header-link{
+    display: inline-block;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    background: #c9c1ac;
+    border-radius: 10px;
+    transition: all 2s ease;
+    animation: frombottom;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.header-link:hover{
+    color: #242424;
+}
+
+@keyframes frombottom{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+#cooked-food{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+#image{
+    height: 400px;
+    widows: 450px;
+}
+.nav-link ul li{
+    display: inline-block;
+}
+
+/* About Us */
+.jumbotron{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+  /* footer */
+  .footer{
+    font-family: 'Poppins', sans-serif;
+      background: #303036;
+      color: white;
+      height: 300px;
+      width: auto;
+      position: relative;
+  }
+.footer-content{
+      height: 350px;
+      display: flex;
+  }
+.footer-section{
+      flex: 1;
+      padding: 25px;
+  }
+
+.footer-bottom{
+      background: #343440;
+      color: #686868;
+      height: 50px;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      padding-top: 15px;
+  }
+.footer-content h1,h2{
+      color: white;
+  }
+.footer-content .about h1 span{
+      color: skyblue;
+  }
+.contact span{
+      display: block;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+  }
+.socail-icons a{
+      border: 1px solid gray;
+      width: 45px;
+      height: 41px;
+      padding-top: 5px;
+      margin-right: 5px;
+      text-align: center;
+      display: inline-block;
+      font-size: 1.3em;
+      border-radius: 5px;
+  }
+.contact-input{
+      background: #272727;
+      color: #bebebe;
+      margin-bottom: 10px;
+      line-height: 1.5rem;
+      padding: .9rem 1.4rem;
+      border: none;
+  }
+
+
+.contact-input:focus{
+      background: #1a1a1a;
+  }
+.btn{
+      padding: .7rem 1.3rem;
+      line-height: 1.3rem;
+  }
