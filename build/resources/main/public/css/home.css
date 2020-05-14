@@ -50,7 +50,7 @@
     font-weight: 100;
     font-family: san-serif;
     line-height: 100px;
-    color:black;
+    color:white;
 }
 .content p{
     color:black;
@@ -172,7 +172,5 @@ color:black;
     padding-top:25px;
     padding-bottom:25px;
     background: black;
-    color:white;
-    font-size: 30px;
     text-align:center;
 }
