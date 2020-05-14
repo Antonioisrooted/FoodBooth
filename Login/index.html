@@ -1,50 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link href="style.css" rel="stylesheet">
-  <title>FoodBooth Login</title>
-</head>
-<body>
-  <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom,
-   rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('five-white-plates-with-different-kinds-of-dishes-54455.jpg')">
+<div class="content">
+  <h1>Food Booth</h1>
+  <style>
 
-<div id="login">
-<h2>FoodBooth</h2>
-<h4> Click here to Login and get started</h4>
-<input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
+  body {
+    background: #fff;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    background-image: url('table-on-wooden-plank-326279.jpg');
+    background-position: 0%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+    color: black;
+
+  }
+
+  .jumbotron{
+    text-align: center;
+
+  }
+  .bg-cover {
+    background-attachment: static;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+      </style>
+    <title>FoodBooth Login</title>
+  </head>
+  <body>
+    <div class="jumbotron"  style="color: black;">
+
+  <div id="login">
+  <h2>FoodBooth</h2>
+  <h4> Click here to Log on and get started</h4>
+  <input type="email" placeholder="Email..." id="email_field" />
+      <input type="password" placeholder="Password..." id="password_field" />
 
 
-    <button id="login">Login</button>
+      <button id="login">Login</button>
+  </div>
+
+      <div  id="text1">
+        <h1 >Welcome</h1>
+        <p>Welcome to our site. We're glad to have you here. Please Select the area you want to visit</p>
+        <a href="/">Restaurants</a> <br>
+        <a href="/">Individual</a>
+      </div>
+   </div>
+    <script>
+      $(document).ready(function(){
+    $('#text1').hide()
+    $("#login").click(function() {
+  $("#text1").show();
+    $("#login").hide();
+    });
+  }
+  );
+  $(document).ready(function(){
+    $("#text1").click(function(){
+        $("#text1").hide();
+        $("#login").show()
+    });
+  });
+    </script>
+
 </div>
 
-    <div  id="text1">
-      <h1>Welcome</h1>
-      <p>Welcome to our site. We're glad to have you here. Please Select the area you want to visit</p>
-      <a href="/">Restaurants</a> <br>
-      <a href="/">Individual</a>
-    </div>
- </div>
-  <script>
-    $(document).ready(function(){
-  $('#text1').hide()
-  $("#login").click(function() {
-$("#text1").show();
-  $("#login").hide();    
-  });
-}
-);
-$(document).ready(function(){
-  $("#text1").click(function(){
-      $("#text1").hide();
-      $("#login").show()
-  });
-});
-  </script>
-  
-</body>
-</html>
+{{/partial}}
