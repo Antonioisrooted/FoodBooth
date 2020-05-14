@@ -1,54 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>FoodBoth Login Form</title>
-  <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <title>FoodBooth Login</title>
 </head>
 <body>
-
-  <div id="login_div" class="main-div">
+  <div class="jumbotron">
+  <div id="main_div" class="main-div">
     <h3 style="color: yellow;">Login to FoodBooth </h3> <br>
-    <p style="color: white;" >Welcome to our site. We're glad to have you here. Please login with the credentials assigned to you to continue</p>
+    <p>Welcome to our site. We're glad to have you here. Please login with the credentials assigned to you to continue</p>
 
     <input type="email" placeholder="Email..." id="email_field" />
     <input type="password" placeholder="Password..." id="password_field" />
 
 
-    <button onclick="login()">Login to Account</button>
+    <button id="login">Login</button>
   </div>
-
-  <div id="user_div" class="loggedin-div">
-    <h1 style="color: azure;">Welcome</h1>
-    <p id="user_para" style="color: aqua;">Welcome to the FoodBooth web app. You're currently logged in.</p> <br>
-    <h3 style="color: aqua;">Select Section to navigate</h3> <br>
-    <ol>
-      <li style="color: white;"> Resturants</li>
-      <li style="color: white;" >Recipes</li>
-    </ol>
-    <button onclick="logout()">Logout</button>
+  <br>
+  <br>  
+  <div id="mydiv"> 
+    <h1>Welcome</h1>
+      <p id="user_para" style="color: aqua;">Welcome to the FoodBooth web app. You're currently logged in.</p> <br>
+      <h3 style="color: aqua;">Select Section to navigate</h3>
+      <ol>
+        <li> Restaurants</li>
+        <li>Recipes</li>
+      </ol>
+      <button onclick="logout()">Logout</button></div> 
   </div>
-
-
-
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyClKAcxbT42Qax4YCSunbsleituAR_l0qU",
-      authDomain: "foodbooth-64c6b.firebaseapp.com",
-      databaseURL: "https://foodbooth-64c6b.firebaseio.com",
-      projectId: "foodbooth-64c6b",
-      storageBucket: "foodbooth-64c6b.appspot.com",
-      messagingSenderId: "1014993971453",
-      appId: "1:1014993971453:web:ab02a4bb3b14e98622f694",
-      measurementId: "G-KPCP8NQ6NL"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-  </script>  <script src="index.js"></script>
-
+  <script src="index.js"></script>
+  
 </body>
 </html>
