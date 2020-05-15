@@ -1,8 +1,7 @@
 package Restaurants;
 
-import org.sql2o.Connection;
-
-import java.util.List;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Objects;
 
 public class PostMeal extends Animal{
@@ -40,17 +39,19 @@ public class PostMeal extends Animal{
         return Objects.hash(description, cook, name, id, type);
     }
 
-    public static List<PostMeal> all(){
+    public static void all() {
         String sql = "SELECT * FROM animals WHERE type='Post'";
-        try(Connection con = DB.sql2o.open()){
+        try ( Connection con = (Connection) DB.sql2o.createStatement() ) {
             return con.createQuery(sql)
                     .executeAndFetch(PostMeal.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
     public void save(){
 
-        try(Connection con = DB.sql2o.open()){
+        try(Connection con = (Connection) DB.sql2o.createStatement() ){
             String sql = "INSERT INTO animals (name,type,health,age) VALUES (:name,:type,:description,:cook);";
             this.id = (int) con.createQuery(sql,true)
                     .addParameter("name",this.name)
@@ -59,17 +60,30 @@ public class PostMeal extends Animal{
                     .addParameter("cook",this.cook)
                     .executeUpdate()
                     .getKey();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
     public static PostMeal find(int id) {
-        try (Connection con = DB.sql2o.open()) {
+        try (Connection con = (Connection) DB.sql2o.createStatement() ) {
             String sql = "SELECT * FROM animals where id=:id";
             PostMeal animal = con.createQuery(sql)
                     .addParameter("id", id)
                     .throwOnMappingFailure(false)
                     .executeAndFetchFirst(PostMeal.class);
             return animal;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
+        return null;
+    }
+
+    public String getName() {
+        return null;
+    }
+
+    public int getId() {
+        return 0;
     }
 }
 

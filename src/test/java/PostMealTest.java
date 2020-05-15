@@ -65,7 +65,7 @@ public class PostMealTest {
         PostMeal testSecondMeal = createPostmeal();
         testSecondMeal.save();
 
-        assertEquals(true, testSecondMeal.find(testSecondMeal.getId()).equals(testSecondMeal));
+        assertEquals(true, testSecondMeal.find((int) testSecondMeal.getId()).equals(testSecondMeal));
     }
 
 

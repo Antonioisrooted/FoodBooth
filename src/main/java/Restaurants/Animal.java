@@ -1,7 +1,9 @@
-import Restaurants.Odder;
-import org.sql2o.Connection;
+package Restaurants;
 
-import java.util.List;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+//import org.sql2o.Connection;
 
 public abstract class Animal {
 
@@ -10,7 +12,7 @@ public abstract class Animal {
     public int id;
     public String type;
     public String cook;
-    public String descrition;
+    protected String description;
 
     public String getName(){
         return name;
@@ -24,16 +26,18 @@ public abstract class Animal {
     public String getCook(){
         return cook;
     }
-    public String getDescrition(){ return descrition; }
+    public String getDescription(){ return description; }
 
 
 
-    public List<Odder> getOdder() {
-        try (Connection con = DB.sql2o.open()) {
+    public void getOdder() {
+        try ( Connection con = (Connection) DB.sql2o.createStatement() ) {
             String sql = "SELECT * FROM odder WHERE animalid = :id";
             return con.createQuery(sql)
                     .addParameter("id", this.id)
                     .executeAndFetch(Odder.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

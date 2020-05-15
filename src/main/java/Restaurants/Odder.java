@@ -1,17 +1,21 @@
-import org.sql2o.*;
+package Restaurants;
+
+//import org.sql2o.*;
 
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Timestamp;
-
 import java.util.List;
 import java.util.Objects;
 
 public class Odder {
+    private static final DB DB = null;
     private int id;
     private int animalId;
     private String sightLocation;
     private String rangerName;
     private Timestamp viewed;
+    private Object con;
 
     public Odder(int animalId, String sightLocation, String rangerName){
         this.animalId = animalId;
@@ -54,7 +58,10 @@ public class Odder {
     }
 
     public void save(){
-        try(Connection con = DB.sql2o.open()){
+        try(Connection con = DB.sql2o;) {
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }{
             String sql = "INSERT INTO sightings (animalid, sightlocation, rangername) VALUES (:animalId, :sightLocation, :rangerName)";
             this.id = (int) con.createQuery(sql,true)
                     .addParameter("animalId",this.animalId)
@@ -66,18 +73,22 @@ public class Odder {
     }
     public static List<Odder> all(){
         String sql = "SELECT * FROM sightings";
-        try(Connection con = DB.sql2o.open()){
+        try(Connection con = (Connection) DB.sql2o.createStatement() ){
             return con.createQuery(sql)
                     .executeAndFetch(Odder.class);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
     public static Odder find(int id){
-        try(Connection con = DB.sql2o.open()) {
+        try(Connection con = (Connection) DB.sql2o.createStatement() ) {
             String sql = "SELECT * FROM sightings WHERE id = :id";
             Odder sighting = con.createQuery(sql)
                     .addParameter("id",id)
                     .executeAndFetchFirst(Odder.class);
             return sighting;
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

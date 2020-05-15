@@ -1,3 +1,4 @@
+import Restaurants.Odder;
 import Restaurants.PostRecipe;
 import org.junit.Rule;
 import org.junit.Test;
@@ -12,6 +13,7 @@ public class OdderTest {
     @Test
     public void sighting_instanceOfOdder_true(){
         Odder testOdder = createOdder();
+        Object testOdderz = null;
         assertEquals(true, testOdderz instanceof Odder);
     }
     @Test
@@ -47,6 +49,11 @@ public class OdderTest {
         Odder savedOdder = Odder.all().get(0);
         assertEquals(savedOdder.getId(),testOdderz.getId());
     }
+
+    private Odder createOdderz() {
+        return null;
+    }
+
     @Test
     public void all_returnsAllInstancesOfOdder_true(){
         Odder testOdderz = createOdder();
